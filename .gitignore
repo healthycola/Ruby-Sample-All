@@ -1,0 +1,22 @@
+# Ignore all these
+
+# Bundler config
+/.bundle
+
+# Default SQLite database
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# logfiles and tempfiles
+/log/*.log
+/tmp
+
+# unneeded files
+database.yml
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
