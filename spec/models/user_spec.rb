@@ -39,6 +39,14 @@ describe User do
   	end
   end
 
+  describe "when email format is invalid" do
+    addresses = %w[user@foo,com user_at_foo.org foo@bar+baz.com foo@bar..com]
+     addresses.each do |invalid_address|
+      before { @sampleUser.email = invalid_address }
+      it { should_not be_valid }
+    end
+  end
+
   describe "when email is duplicated" do
   	before do 
   		duplicatedEmail = @sampleUser.dup 
